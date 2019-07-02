@@ -1,4 +1,4 @@
-FROM python:rc-alpine
+FROM python:3.7.3-alpine3.9
 
 # runtime dependencies
 RUN set -ex \
