@@ -19,6 +19,7 @@ LABEL org.label-schema.name="pgAdmin4" \
 
 RUN set -ex \
 	&& apk add --no-cache --virtual .build-deps \
+		make \
 		libffi-dev \
 		gcc \
 		musl-dev \
