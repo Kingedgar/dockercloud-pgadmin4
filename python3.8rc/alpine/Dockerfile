@@ -3,6 +3,7 @@ FROM python:rc-alpine
 # runtime dependencies
 RUN set -ex \
 	&& apk add --no-cache --virtual .pgadmin4-rundeps \
+		libffi-dev \
 		bash \
 		postgresql
 
@@ -18,6 +19,7 @@ LABEL org.label-schema.name="pgAdmin4" \
 
 RUN set -ex \
 	&& apk add --no-cache --virtual .build-deps \
+		libffi-dev \
 		gcc \
 		musl-dev \
 		postgresql-dev \
